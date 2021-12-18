@@ -1,22 +1,20 @@
 const cart = () => {
+  const cartBtn = document.getElementById("cart");
+  const cartModal = document.querySelector(".cart");
+  const cartCloseBtn = cartModal.querySelector(".cart-close");
 
-    const cartBtn = document.getElementById('cart')
-    const cartModal = document.querySelector('.cart')
-    const cartCloseBtn = cartModal.querySelector('.cart-close')
+  const openCart = () => {
+    cartModal.style.display = "flex";
+  };
 
+  const closeCart = () => {
+    cartModal.style.display = "";
+  };
 
-    const openCart = () => {
-        cartModal.style.display = 'flex'
-    }
+  cartBtn.addEventListener("click", openCart);
 
-    const closeCart = () => {
-        cartModal.style.display = ''
-    }
+  cartCloseBtn.addEventListener("click", closeCart);
+};
+// console.dir(cartBtn);
 
-
-
-    cartBtn.addEventListener('click', openCart)
-    cartCloseBtn.addEventListener('click', closeCart)
-}
-
-export default cart
+export default cart;
